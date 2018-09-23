@@ -1,0 +1,6 @@
+#container{
+    /* background: gray; */
+    width: 360px;
+    margin: 0 auto; /*top n bottom - 0, left n right - auto */
+    border: 2px solid gray;
+}   
