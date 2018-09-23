@@ -14,7 +14,8 @@
     // if($(this).css("color") === "gray"){    //gray doesn't work. Put rgb here.
     
     
-    $("li").click(function(){
+
+ /*   $("li").click(function(){
     
         if($(this).css("color") === "rgb(128, 128, 128)") { 
             $(this).css({
@@ -27,5 +28,11 @@
                 textDecoration: "line-through"
             });
         }
+    });
 
+  Better still, create a CSS class. Toggle it on and off as needed.
+*/
+
+$("li").click(function(){
+    $(this).toggleClass("completed");
 });
