@@ -31,12 +31,12 @@
   Better still, create a CSS class. Toggle it on and off as needed.
 */
 
-$("li").click(function(){
+$("ul").on("click", "li", function(){  //when an li is clicked inside of this ul, run this code
     $(this).toggleClass("completed");
-});
+}); //you add a listener to an element that exists when the page loads, hence ul coz all li's don't exist when the page loads
 
 //remove todos by clicking X
-$("span").click(function(event){
+$("ul").on("click", "span", function(event){
     $(this).parent().fadeOut(500, function(){
         $(this).remove();
     });
@@ -45,7 +45,7 @@ $("span").click(function(event){
 });
 
 //add new todo
-$("input[type=text]").keypress(function(event){
+$("input[type = text]").keypress(function(event){
     if(event.which === 13){
         var todoText = $(this).val();    //val() as getter
         $(this).val("");                 //val() as setter
