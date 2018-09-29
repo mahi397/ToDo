@@ -1,10 +1,10 @@
 //checking off specific li when clicked
 // $("li").click(function(){
-    // // $(this).css("color", "gray");
-    // // $(this).css("text-decoration", "line-through");
+    // $(this).css("color", "gray");
+    // $(this).css("text-decoration", "line-through");
     
-    // // above OR :-
-    // //make an object with key-val pairs as color and textdecoration
+    // above OR :-
+    //make an object with key-val pairs as color and textdecoration
     
     // $(this).css({
     //     color: "gray",
@@ -12,8 +12,6 @@
     // });
 
     // if($(this).css("color") === "gray"){    //gray doesn't work. Put rgb here.
-    
-    
 
  /*   $("li").click(function(){
     
@@ -35,4 +33,13 @@
 
 $("li").click(function(){
     $(this).toggleClass("completed");
+});
+
+//remove todos by clicking X
+$("span").click(function(event){
+    $(this).parent().fadeOut(500, function(){
+        $(this).remove();
+    });
+    
+    event.stopPropagation();
 });
