@@ -43,3 +43,12 @@ $("span").click(function(event){
     
     event.stopPropagation();
 });
+
+//add new todo
+$("input[type=text]").keypress(function(event){
+    if(event.which === 13){
+        var todoText = $(this).val();    //val() as getter
+        $(this).val("");                 //val() as setter
+        $("ul").append("<li><span>X</span> " + todoText + "</li>");
+    }
+});
